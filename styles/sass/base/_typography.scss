@@ -1,0 +1,31 @@
+body {
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+}
+
+h3 {
+  font-size: $h3;
+}
+
+h4 {
+  font-size: $h5;
+}
+
+p,
+a {
+  font-size: $text-md;
+}
+
+.nav__logo {
+  font-size: $h3;
+  font-weight: 700;
+  font-size: 3rem;
+}

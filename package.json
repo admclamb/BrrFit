@@ -1,0 +1,14 @@
+{
+  "name": "brrfit",
+  "version": "1.0.0",
+  "description": "E commerce website for jackets",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass styles/sass/main.scss styles/css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

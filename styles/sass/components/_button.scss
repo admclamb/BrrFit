@@ -1,0 +1,15 @@
+.button {
+  padding: 0.7rem 0.9rem;
+  cursor: pointer;
+}
+
+.button-primary-outline {
+  border: solid 1px $primary;
+  background-color: inherit;
+  color: inherit;
+}
+
+.button-primary {
+  background-color: $primary;
+  color: $white;
+}
