@@ -1,0 +1,11 @@
+@keyframes moveUpThenDown {
+  // Using translate with two values as the position is aboslute
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, -150%);
+  }
+}

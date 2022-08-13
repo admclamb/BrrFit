@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   background: linear-gradient(
       to top,
       rgba(83, 9, 9, 0.493),
@@ -16,10 +17,18 @@
     font-size: 3.5rem;
     max-width: 40%;
     text-align: center;
+    margin-top: 5rem;
     margin-bottom: 2rem;
 
     & span {
       color: $primary;
     }
+  }
+
+  &__bottom-button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

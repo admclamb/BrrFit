@@ -4,12 +4,59 @@
 }
 
 .button-primary-outline {
-  border: solid 1px $primary;
-  background-color: inherit;
-  color: inherit;
+  &,
+  &:link,
+  &:visited {
+    border: solid 2px $primary;
+    background-color: inherit;
+    color: inherit;
+    padding: 0.8rem 2.3rem;
+    border-radius: 2.5rem;
+    transition: all 0.2s;
+    font-size: $h5;
+  }
+
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
+    background-color: $primary;
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(1px);
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.2);
+    background-color: $primary;
+  }
 }
 
 .button-primary {
   background-color: $primary;
+  border: solid 2px $primary;
   color: $white;
+
+  &:hover {
+    background-color: inherit;
+    color: $white;
+    transition: 0.2s;
+  }
+}
+
+.circle-button {
+  border-radius: 100%;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  animation: moveUpThenDown 1s linear infinite;
+
+  &:hover {
+    background-color: $primary;
+  }
 }

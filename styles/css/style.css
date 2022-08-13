@@ -4,6 +4,10 @@
 .container {
   margin-inline: 10%; }
 
+.pill {
+  padding: 0.6rem 2rem !important;
+  border-radius: 2rem; }
+
 *::before,
 *::after,
 * {
@@ -36,15 +40,27 @@ a {
   font-weight: 700;
   font-size: 3rem; }
 
+@keyframes moveUpThenDown {
+  0%,
+  100% {
+    transform: translate(-50%, -50%); }
+  50% {
+    transform: translate(-50%, -150%); } }
+
 .nav {
   color: #fff;
   padding-inline: 10%;
   display: flex;
   justify-content: space-between;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 50; }
+  .nav__logo a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit; }
   .nav__logo span {
-    color: #f52828; }
+    color: #ca2222; }
   .nav ul {
     list-style-type: none;
     display: flex;
@@ -55,10 +71,11 @@ a {
         color: inherit;
         text-decoration: none; }
         .nav ul li a:hover {
-          color: #f52828;
+          color: #ca2222;
           transition: 0.3s; }
 
 .hero {
+  position: relative;
   background: linear-gradient(to top, rgba(83, 9, 9, 0.493), rgba(48, 48, 48, 0.685)), url("../../images/Banner1.jpg") center/cover no-repeat fixed;
   height: 100vh;
   display: flex;
@@ -70,19 +87,60 @@ a {
     font-size: 3.5rem;
     max-width: 40%;
     text-align: center;
+    margin-top: 5rem;
     margin-bottom: 2rem; }
     .hero__text span {
-      color: #f52828; }
+      color: #ca2222; }
+  .hero__bottom-button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .button {
   padding: 0.7rem 0.9rem;
   cursor: pointer; }
 
-.button-primary-outline {
-  border: solid 1px #f52828;
+.button-primary-outline, .button-primary-outline:link, .button-primary-outline:visited {
+  border: solid 2px #ca2222;
   background-color: inherit;
-  color: inherit; }
+  color: inherit;
+  padding: 0.8rem 2.3rem;
+  border-radius: 2.5rem;
+  transition: all 0.2s;
+  font-size: 1.25rem; }
+
+.button-primary-outline:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 1rem 2rem rgba(34, 34, 34, 0.2);
+  background-color: #ca2222; }
+  .button-primary-outline:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.button-primary-outline:active {
+  outline: none;
+  transform: translateY(1px);
+  box-shadow: 0 0.5rem 1rem rgba(34, 34, 34, 0.2);
+  background-color: #ca2222; }
 
 .button-primary {
-  background-color: #f52828;
+  background-color: #ca2222;
+  border: solid 2px #ca2222;
   color: #fff; }
+  .button-primary:hover {
+    background-color: inherit;
+    color: #fff;
+    transition: 0.2s; }
+
+.circle-button {
+  border-radius: 100%;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  animation: moveUpThenDown 1s linear infinite; }
+  .circle-button:hover {
+    background-color: #ca2222; }
