@@ -1,0 +1,11 @@
+.carousel {
+  transition: 1s;
+}
+
+.left {
+  transform: translateX(-10rem);
+}
+
+.right {
+  transform: translateX(10rem);
+}

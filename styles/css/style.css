@@ -15,6 +15,9 @@
   margin: 0;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: 'Dosis', sans-serif;
   line-height: 1.6; }
@@ -49,12 +52,16 @@ a {
 
 .nav {
   color: #fff;
-  padding-inline: 10%;
+  padding-inline: 3%;
   display: flex;
   justify-content: space-between;
   position: absolute;
   width: 100%;
-  z-index: 50; }
+  z-index: 50;
+  transition: 0.2s; }
+  @media screen and (min-width: 1200px) {
+    .nav {
+      padding-inline: 10%; } }
   .nav__logo a {
     text-decoration: none;
     color: inherit;
@@ -73,6 +80,28 @@ a {
         .nav ul li a:hover {
           color: #ca2222;
           transition: 0.3s; }
+    .nav ul__collapsed-button {
+      width: 20px; }
+  .nav__center {
+    margin-left: auto; }
+    @media screen and (min-width: 750px) {
+      .nav__center {
+        margin-left: 0; } }
+
+.burger {
+  width: 40px;
+  height: 4px;
+  background-color: red; }
+  .burger:not(:last-child) {
+    margin-bottom: 5px; }
+
+.nav-fixed {
+  color: #222;
+  background-color: #fff;
+  transition: 0.5s;
+  position: fixed;
+  border-bottom: 1px solid #c2c2c2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
 
 .hero {
   position: relative;
@@ -141,6 +170,6 @@ a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  animation: moveUpThenDown 1s linear infinite; }
+  animation: moveUpThenDown 1.75s linear infinite; }
   .circle-button:hover {
     background-color: #ca2222; }
