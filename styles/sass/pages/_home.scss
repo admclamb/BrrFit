@@ -1,4 +1,9 @@
 .fresh-fits {
   text-align: center;
   margin-top: 2rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
 }

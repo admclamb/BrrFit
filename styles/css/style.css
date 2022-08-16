@@ -215,6 +215,17 @@ a {
   .circle-button:hover {
     background-color: #ca2222; }
 
+.product-card {
+  width: 12rem;
+  border: solid 1px gray; }
+  .product-card__stars i {
+    color: #ca2222; }
+  .product-card__title {
+    margin-bottom: 1rem; }
+
 .fresh-fits {
   text-align: center;
   margin-top: 2rem; }
+  .fresh-fits__list {
+    display: flex;
+    justify-content: center; }

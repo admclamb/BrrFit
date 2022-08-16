@@ -1,0 +1,11 @@
+.product-card {
+  width: 12rem;
+  border: solid 1px gray;
+  &__stars i {
+    color: $primary;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+}
