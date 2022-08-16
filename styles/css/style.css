@@ -87,6 +87,10 @@ a {
     @media screen and (min-width: 750px) {
       .nav__center {
         margin-left: 0; } }
+  @media screen and (max-width: 650px) {
+    .nav__center, .nav__right {
+      transform: translateY(-200px);
+      position: absolute; } }
 
 .burger {
   width: 40px;
@@ -103,6 +107,40 @@ a {
   border-bottom: 1px solid #c2c2c2;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
 
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 3rem 10%; }
+  .footer__main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+    .footer__main__section h4 {
+      margin-bottom: 1.2rem; }
+    .footer__main__section ul {
+      list-style-type: none; }
+      .footer__main__section ul li:not(:last-child) {
+        margin-bottom: 0.4rem; }
+      .footer__main__section ul li a {
+        color: inherit;
+        text-decoration: none; }
+        .footer__main__section ul li a:hover, .footer__main__section ul li a:active {
+          color: #ca2222; }
+        .footer__main__section ul li a i {
+          margin-right: 0.4rem;
+          color: #ca2222; }
+    @media all and (max-width: 750px) {
+      .footer__main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem; } }
+    @media all and (max-width: 300px) {
+      .footer__main {
+        grid-template-columns: 1fr; } }
+  .footer__copyright {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 0.4rem; }
+
 .hero {
   position: relative;
   background: linear-gradient(to top, rgba(83, 9, 9, 0.493), rgba(48, 48, 48, 0.685)), url("../../images/Banner1.jpg") center/cover no-repeat fixed;
@@ -114,12 +152,15 @@ a {
   color: #fff; }
   .hero__text {
     font-size: 3.5rem;
-    max-width: 40%;
+    max-width: 100%;
     text-align: center;
     margin-top: 5rem;
     margin-bottom: 2rem; }
     .hero__text span {
       color: #ca2222; }
+    @media screen and (min-width: 1250px) {
+      .hero__text {
+        max-width: 40%; } }
   .hero__bottom-button {
     position: absolute;
     bottom: 5%;
@@ -173,3 +214,7 @@ a {
   animation: moveUpThenDown 1.75s linear infinite; }
   .circle-button:hover {
     background-color: #ca2222; }
+
+.fresh-fits {
+  text-align: center;
+  margin-top: 2rem; }

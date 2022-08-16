@@ -54,6 +54,15 @@
       margin-left: 0;
     }
   }
+
+  // Change responsiveness for navbar
+  @media screen and (max-width: 650px) {
+    &__center,
+    &__right {
+      transform: translateY(-200px);
+      position: absolute;
+    }
+  }
 }
 
 .burger {
