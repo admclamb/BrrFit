@@ -64,6 +64,14 @@
     }
   }
 }
+.nav-fixed {
+  color: $black;
+  background-color: $white;
+  transition: 0.5s;
+  position: fixed;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
 // Hamburger
 
