@@ -1,9 +1,65 @@
 .fresh-fits {
   text-align: center;
-  margin-top: 2rem;
-
+  margin-top: 4rem;
   &__list {
     display: flex;
     justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  margin-bottom: 2rem;
+}
+
+.discount {
+  text-align: center;
+  padding: 5rem;
+  background: linear-gradient(
+      to top,
+      rgba(83, 9, 9, 0.493),
+      rgba(48, 48, 48, 0.685)
+    ),
+    url(../../images/aditya-vyas-PzhmEp_aDU4-unsplash.jpg) center/cover
+      no-repeat fixed;
+  color: $white;
+
+  & p {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.newsletter {
+  padding: 1rem $container-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $gray;
+  &__container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex: 2 1;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  &__right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & input {
+      width: 70%;
+      padding: 1.5rem 0;
+      text-indent: 1rem;
+      border: 1px solid var(--dark-color-alt);
+    }
+
+    & button {
+      padding: 1.5rem 3rem;
+      background-color: var(--default-color);
+      border: 1px solid var(--default-color);
+      color: var(--white);
+      margin-left: -2rem;
+    }
   }
 }

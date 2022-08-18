@@ -1,8 +1,12 @@
 .product-card {
-  width: 12rem;
-  border: solid 1px gray;
+  width: 18rem;
   &__stars i {
     color: $primary;
+  }
+
+  &:hover img {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.05);
   }
 
   &__title {

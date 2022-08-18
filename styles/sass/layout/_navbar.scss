@@ -65,29 +65,43 @@
   }
 }
 
-.burger {
-  width: 40px;
-  height: 4px;
-  background-color: red;
-  // display: none;
-  &:not(:last-child) {
-    margin-bottom: 5px;
-  }
-  &__1 {
-  }
+// Hamburger
 
-  &__2 {
-  }
-
-  &__3 {
-  }
+.burger,
+.burger::before,
+.burger::after {
+  border-radius: 10px;
+  background-color: var(--color-light);
+  transition: all 0.25s ease-in-out;
+  width: var(--burger-width);
+  height: var(--burger-height);
 }
 
-.nav-fixed {
-  color: $black;
-  background-color: $white;
-  transition: 0.5s;
-  position: fixed;
-  border-bottom: 1px solid rgb(194, 194, 194);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+}
+
+.burger::before {
+  transform: translateY(-8px);
+}
+
+.burger::after {
+  transform: translateY(8px);
+}
+
+/* animation for hamburger menu */
+.burger-menu.opened .burger {
+  transform: translateX(-12px);
+  background: transparent;
+}
+
+.burger-menu.opened .burger::before {
+  transform: rotate(45deg) translate(8px, -8px);
+  background-color: var(--color-dark);
+}
+.burger-menu.opened .burger::after {
+  transform: rotate(-45deg) translate(8px, 8px);
+  background-color: var(--color-dark);
 }
